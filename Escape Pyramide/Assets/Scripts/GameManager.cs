@@ -4,32 +4,35 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject pauseMenu;
-    public BatteryTimer light;
-    private bool pauseMenuStatut;
+    public BatteryTimer lightBattery;
+    public Camera playerCamera;
+    public Camera menuCamera;
 
-	// Use this for initialization
-	void Start () {
-        pauseMenu.SetActive(false);
+    //Data used by Battery flashlight Timer script
+    private bool pauseMenuStatut;
+    private void Start()
+    {
+        playerCamera.enabled = true;
+        menuCamera.enabled = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         OpenPauseMenu();
-	}
+    }
+    //Switch camera between player or pauseMenu Camera
     void OpenPauseMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseMenu.activeSelf == true )
+            if (playerCamera.enabled == true)
             {
-                pauseMenu.SetActive(false);
-                light.gameInPause = false;
+                playerCamera.enabled = false;
+                menuCamera.enabled = true;
             }
-            else if (pauseMenu.activeSelf == false)
+            else if (playerCamera.enabled == false)
             {
-                pauseMenu.SetActive(true);
-                light.gameInPause = true;
+                playerCamera.enabled = true;
+                menuCamera.enabled = false;
             }
         }
     }
