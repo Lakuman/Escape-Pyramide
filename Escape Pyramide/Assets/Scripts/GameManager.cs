@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour {
     public BatteryTimer lightBattery;
     public Camera playerCamera;
     public Camera menuCamera;
+    public GameObject panelFlashLight;
 
     //Data used by Battery flashlight Timer script
-    private bool pauseMenuStatut;
     private void Start()
     {
         playerCamera.enabled = true;
@@ -26,11 +26,15 @@ public class GameManager : MonoBehaviour {
         {
             if (playerCamera.enabled == true)
             {
+                panelFlashLight.SetActive(false);
+                lightBattery.gameInPause = true;
                 playerCamera.enabled = false;
                 menuCamera.enabled = true;
             }
             else if (playerCamera.enabled == false)
             {
+                panelFlashLight.SetActive(true);
+                lightBattery.gameInPause = false;
                 playerCamera.enabled = true;
                 menuCamera.enabled = false;
             }
