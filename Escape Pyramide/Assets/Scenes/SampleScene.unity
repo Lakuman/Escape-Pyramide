@@ -598,22 +598,22 @@ Prefab:
     - target: {fileID: 108831179746831954, guid: 1903efc8c321e03419531cebc558afe4,
         type: 2}
       propertyPath: m_Range
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 108291840039633964, guid: 1903efc8c321e03419531cebc558afe4,
         type: 2}
       propertyPath: m_Range
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 108291840039633964, guid: 1903efc8c321e03419531cebc558afe4,
         type: 2}
       propertyPath: m_SpotAngle
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 108831179746831954, guid: 1903efc8c321e03419531cebc558afe4,
         type: 2}
       propertyPath: m_SpotAngle
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 20790688034906948, guid: 1903efc8c321e03419531cebc558afe4, type: 2}
