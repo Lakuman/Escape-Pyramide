@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public Camera playerCamera;
     public Camera menuCamera;
     public GameObject panelFlashLight;
+    public GameObject player;
 
     //Data used by Battery flashlight Timer script
     private void Start()
@@ -24,17 +25,23 @@ public class GameManager : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // Display Menu Camera
             if (playerCamera.enabled == true)
             {
+                player.SetActive(false);
                 panelFlashLight.SetActive(false);
+                lightBattery.TimerInPause = true;
                 lightBattery.gameInPause = true;
                 playerCamera.enabled = false;
                 menuCamera.enabled = true;
             }
+            // Display Play Camera
             else if (playerCamera.enabled == false)
             {
+                player.SetActive(true);
                 panelFlashLight.SetActive(true);
                 lightBattery.gameInPause = false;
+                lightBattery.TimerInPause = false;
                 playerCamera.enabled = true;
                 menuCamera.enabled = false;
             }

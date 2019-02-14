@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
         Turn();
         //LeftShift
         Crouch();
-
     }
     private void Move()
     {

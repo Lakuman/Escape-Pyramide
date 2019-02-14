@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426059715227138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.034729652, z: 0.19696155}
+  m_LocalPosition: {x: 0, y: -0.19696644, z: 0.03470183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4888703986279550}
@@ -192,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395535080808172}
   m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4020867505484438}
@@ -233,7 +233,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1807994876499206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4956872732136234}
@@ -385,7 +385,7 @@ Light:
   m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
@@ -405,7 +405,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_ShadowRadius: 1
+  m_ShadowRadius: 6
   m_ShadowAngle: 0
 --- !u!108 &108476509182917342
 Light:
@@ -419,10 +419,10 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Intensity: 4
   m_Range: 25
-  m_SpotAngle: 70
+  m_SpotAngle: 80
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
@@ -454,12 +454,12 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.6179246, g: 0.8071934, b: 1, a: 0}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 25
   m_SpotAngle: 100
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
@@ -508,8 +508,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   flashLightCenter: {fileID: 108397225266993336}
-  flashLightSide: {fileID: 0}
+  flashLightSide: {fileID: 108476509182917342}
+  flashLightHardSides: {fileID: 108831179746831954}
   noBatteryTime: 3600
+  TimerInPause: 0
   gameInPause: 0
   battery1: {fileID: 0}
   battery2: {fileID: 0}
@@ -528,4 +530,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   jump: 3
+  crouchSpeed: 500
   rotationForce: 50
